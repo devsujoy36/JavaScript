@@ -1,3 +1,5 @@
 const song = 'Ami tomar didhay bachi, tomar didhay more jai';
-const doesExist = song.includes('ami');
-console.log()
+const lowerCase = song.toLowerCase();
+
+const doesExist = lowerCase.includes('ami');
+console.log(doesExist);
