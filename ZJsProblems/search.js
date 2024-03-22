@@ -3,4 +3,4 @@ const lowerCase = song.toLowerCase();
 const doesExist = lowerCase.includes('ami');
 const textIndex = lowerCase.indexOf('tomar');
 console.log(doesExist);
-console.log(textIndex);
+console.log(textIndex); 
