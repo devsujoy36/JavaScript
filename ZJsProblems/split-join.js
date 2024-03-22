@@ -25,3 +25,9 @@ const trimEnd = song.trimEnd();
 console.log(trimEnd);
 
 
+//join 
+const lines = ['Sujoy', 'Amahs','Ahibas','Aifsa'];
+const Names = lines.join(': ');
+console.log(Names);
+
+
