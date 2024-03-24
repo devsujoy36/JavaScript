@@ -27,7 +27,7 @@ console.log('Lowest persons length is: ',tallest);
 
 function LargestNumber(numbers1){
     let largest1 = [0];
-    for(let i = 0; i < numbers1; i++){
+    for(let i = 0; i < numbers1.length; i++){
         const index = i;
         const element1 = numbers1[index];
         if(element1>largest1){

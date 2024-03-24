@@ -16,5 +16,6 @@ function rerverseString(text){
 
 }
 
-const myString = 'i am a good boy';
+const myString = 'SUJOY';
 rerverseString(myString);
+forwordString(myString);
