@@ -25,6 +25,9 @@ const heights = [167, 190, 120, 165, 137, 545];
 const tallest = Lowest(heights);
 console.log('Lowest persons length is: ',tallest);
 
+
+
+
 function LargestNumber(numbers1){
     let largest1 = [0];
     for(let i = 0; i < numbers1.length; i++){
