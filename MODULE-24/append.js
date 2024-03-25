@@ -43,4 +43,5 @@ sectionDress.innerHTML = `
             <li>Fotua</li>
             <li>jangu</li>
         </ul>
-`;
+`
+mainContainer.appendChild(sectionDress);
