@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="dom.js"></script>
+    
     <style>
-        .fruits-container li{
+        .fruits-container li {
             color: red;
         }
-        #fruits-title{
+
+        #fruits-title {
             color: black;
         }
-        .importent-places{
-            color: blue ;
+
+        .importent-places {
+            color: blue;
             
+
         }
+        .large-text{
+            font-size: 50px;
+        }
+        
     </style>
 </head>
+
 <body>
     <header>
         <h1>Wellcome to my DOM</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolorum ea consectetur sint obcaecati provident nam recusandae officia nesciunt pariatur! Accusantium, maxime reiciendis? Ut recusandae debitis ipsum eligendi veritatis voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolorum ea consectetur sint obcaecati
+            provident nam recusandae officia nesciunt pariatur! Accusantium, maxime reiciendis? Ut recusandae debitis
+            ipsum eligendi veritatis voluptatem.</p>
     </header>
     <main>
         <section>
-            <h1 class='some sume ami ki je kori'>My Awesome DOM de baba</h1>
+            <h1 id="hang" class='some sume amiv large-text ki je kori'>My Awesome DOM de baba</h1>
             <ul>
                 <li>jalali set</li>
                 <li>Sujoy</li>
@@ -60,21 +71,39 @@
             // console.log(h1.innerText);
         }
 
-        const fruitsTitle = document.getElementById('fruits-title');
-        fruitsTitle.innerText = 'Fruits changed by JS';
+        const title = document.getElementById('fruits-title');
+        title.innerText = 'Fruits changed by JS';
 
         const places = document.getElementsByClassName('importent-places');
         for (const place of places) {
-            console.log(place.innerText);
+            // console.log(place.innerText);
         }
-    
+
+
         const someLi = document.querySelectorAll('.fruits-container li');
         for (const li of someLi) {
-            console.log(li.innerText);
-            
-        }
+            // console.log(li.innerText);
 
+        }
+        const titile = document.getElementById('hang');
+        const getAttribute = titile.getAttribute('class');
+        console.log('GetAtribute holo:', getAttribute);
+
+        const ClassList = titile.classList;
+        console.log('Frist ClassList', ClassList);
+        console.log(titile.classList.add('purple.bg'));
+        console.log('Current ClassList', ClassList);
+
+
+        // const setAttribute = document.getElementById('fruits-title');
+        // const a = setAttribute.setAttribute(setAttribute, 'Tooltip set by JavaScript');
+        // console.log('setattribute',a);
+
+        const b = document.getElementsByClassName('fruits-container')[0].innerHTML;
+        console.log('InnerHTML',b);
 
     </script>
+    <script src="dom.js"></script>
 </body>
+
 </html>
