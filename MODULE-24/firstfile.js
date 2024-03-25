@@ -8,9 +8,10 @@ console.log(allTitle);
 
 const secondSection = document.getElementById('Second-section');
 console.log(secondSection);
-secondSection.style.color = 'blue';
-secondSection.style.fontSize = '29px';
-secondSection.style.backgroundColor = 'red';
+secondSection.style.color = 'white';
+secondSection.style.padding = '20px';
+secondSection.style.backgroundColor = 'steelblue';
+secondSection.style.borderRadius = '15px';
 
 const secondList = document.getElementById('second-list');
 const li = document.createElement('li');
