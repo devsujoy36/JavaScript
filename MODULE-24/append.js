@@ -34,14 +34,15 @@ ul.appendChild(li3);
 
 mainContainer.appendChild(section);
 
-const sectionDress = document.createElement(section);
+
+const sectionDress = document.createElement("section");
 sectionDress.innerHTML = `
-<h1>My Dress Section</h1>
-        <ul>
-            <li>Pant</li>
-            <li>Panjabi</li>
-            <li>Fotua</li>
-            <li>jangu</li>
-        </ul>
-`
+            <h1>My Dress Section</h1>
+            <ul>
+                <li>Pant</li>
+                <li>Panjabi</li>
+                <li>Fotua</li>
+                <li>Jangu</li>
+            </ul>
+        `;
 mainContainer.appendChild(sectionDress);
