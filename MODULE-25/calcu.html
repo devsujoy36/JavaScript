@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
     <h1 id="display">For display Ourput</h1>
     <input type="number" id="num1">
@@ -12,10 +16,10 @@
     <input type="number" id="num2">
     <button id="enter-button">Enter</button>
 
-
+    <input type="text" placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs" />
     <script>
         const enterButton = document.getElementById('enter-button');
-        enterButton.addEventListener('click',function(){
+        enterButton.addEventListener('click', function () {
             const inputNum1 = document.getElementById('num1');
             let a = inputNum1.value;
             a = parseInt(a);
@@ -24,7 +28,7 @@
             b = parseInt(b);
             const sum = a * b;
 
-            
+
 
             const output = document.getElementById('display');
             output.innerText = sum;
@@ -42,4 +46,5 @@
         //     })
     </script>
 </body>
+
 </html>
