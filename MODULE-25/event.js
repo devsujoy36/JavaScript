@@ -1,4 +1,4 @@
-// Option 2
+// Option 2 [we will use sometimes]
 function makeBlue() {
     document.body.style.backgroundColor = 'blue';
     document.body.style.color = 'white';
@@ -12,7 +12,7 @@ function makePurple() {
 const purpleButton = document.getElementById('clickmepurple');
 purpleButton.onclick = makePurple;
 
-// Option 3 another version 
+// Option 3 another version  
 const aquaButton = document.getElementById('bg-aqua');
 aquaButton.onclick = function makeAqua() {
     document.body.style.backgroundColor = 'aqua'
@@ -31,7 +31,7 @@ greenButton.addEventListener('click', function makeGreen() {
     document.body.style.backgroundColor = 'lightgreen'
 });
 
-//option 4 final use
+//option 4 final use [we will use sometimes]
 document.getElementById('make-goldenrod').addEventListener('click', function makeGolden() {
     document.body.style.backgroundColor = 'gold'
 });
