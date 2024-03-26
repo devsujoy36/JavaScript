@@ -14,7 +14,19 @@
 
 
     <script>
-        
+        const enterButton = document.getElementById('enter-button');
+        enterButton.addEventListener('click',function(){
+            const inputNum1 = document.getElementById('num1');
+            let a = inputNum1.value;
+            a = parseInt(a);
+            const inputNum2 = document.getElementById('num2');
+            let b = inputNum2.value;
+            b = parseInt(b);
+            const sum = a * b;
+
+            const output = document.getElementById('display');
+            output.innerText = sum;
+        })
 
 
 
