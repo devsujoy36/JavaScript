@@ -9,7 +9,7 @@
         button {
             background-color: white;
             padding: 5px 10px;
-            margin:0 5px;
+            margin: 0 5px;
             border-radius: 15px;
 
         }
@@ -21,33 +21,37 @@
 
     <div>
         <h2>Font Family Test</h2>
-        <button type="button" onclick="document.body.style.fontFamily = 'Segoe UI' "> font Segoe UI</button>
-        <button type="button" onclick="document.body.style.fontFamily = 'Verdana' "> font Verdana</button>
-        <button type="button" onclick="document.body.style.fontFamily = 'Tahoma' ">font Tahoma</button>
+        <button onclick="document.body.style.fontFamily = 'Segoe UI' "> font Segoe UI</button>
+        <button onclick="document.body.style.fontFamily = 'Verdana' "> font Verdana</button>
+        <button onclick="document.body.style.fontFamily = 'Tahoma' ">font Tahoma</button>
     </div>
     <div>
         <h2>Background Color Test</h2>
-        <button type="button" onclick="document.body.style.backgroundColor = 'red'
-    ">BG red</button>
-        <button type="button"
-            onclick="document.body.style.backgroundColor = 'yellow'; document.body.style.color='black'"> BG
-            yellow</button>
-        <button type="button" onclick="document.body.style.backgroundColor = 'white';document.body.style.color='black'">
+        <button onclick="document.body.style.backgroundColor = 'red'">BG red</button>
+        <button
+            onclick="document.body.style.backgroundColor = 'yellow'; document.body.style.color='black'">
+            BG yellow
+        </button>
+        <button onclick="document.body.style.backgroundColor = 'white'; document.body.style.color='black'">
             BG white</button>
         <button onclick="makeBlue()">BG Blue </button>
         <button id="clickmepurple">BG Purple </button>
     </div>
     <div>
         <h1>Onclick er moddhe function diye</h1>
-        <button type="button" id="bg-aqua">BG Aqua</button>
+        <button id="bg-aqua">BG Aqua</button>
+    </div>
+    <br>
+    <div>
+        <!-- option 4 -->
+        <button id="make-pink">Make BG Pink</button>
     </div>
 
 
 
 
 
-
-<!--
+    <!--
     Rule1: inline js using onclick 
     Rule2: internal js using script
     Rule3: external js using script.js file and link in html file
@@ -63,11 +67,13 @@
 
 
     <script>
+        // Option 2
         function makeBlue() {
             document.body.style.backgroundColor = 'blue';
             document.body.style.color = 'white';
         }
 
+        // Option 3
         function makePurple() {
             document.body.style.backgroundColor = 'purple';
             document.body.style.color = 'white';
@@ -75,11 +81,20 @@
         const purpleButton = document.getElementById('clickmepurple');
         purpleButton.onclick = makePurple;
 
-        const ReadMore = document.getElementById('bg-aqua');
-        ReadMore.onclick = function makeAqua() {
+        // Option 3 another version 
+        const aquaButton = document.getElementById('bg-aqua');
+        aquaButton.onclick = function makeAqua() {
             document.body.style.backgroundColor = 'aqua'
-            document.body.style.color = 'red'
         }
+
+        // option 4
+        const pinkButton = document.getElementById('make-pink');
+        pinkButton.addEventListener('click', makePink);
+        function makePink() {
+            document.body.style.backgroundColor='pink'
+        }
+
+        // option 4 another version
 
     </script>
 
