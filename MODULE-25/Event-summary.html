@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+        }
+    </style>
 </head>
 <body>
     <h1>Final DOM Event Handlers</h1>
@@ -13,7 +18,8 @@
 
     <script>
         function handleOnclick() {
-            const handlerStatus = 
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Handled by function attached onclick'
         }
     </script>
 </body>
