@@ -6,35 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            font-family: , , Geneva, , sans-serif;
+        button {
+            background-color: white;
+            padding: 5px 10px;
+            margin:0 5px;
+            border-radius: 15px;
+
         }
     </style>
 </head>
 
 <body>
     <h1 onclick="console.log('h1')">DOM er ajke special events</h1>
-    <button onclick="console.log(3)">Click Me</button>
-    <button onclick="console.log(30)">Another Button</button>
-    <br>
-    <button type="button" onclick="document.body.style.backgroundColor = 'red'">Make background red</button>
-    <button type="button" onclick="document.body.style.backgroundColor = 'yellow'">Make background yellow</button>
-    <button type="button" onclick="document.body.style.backgroundColor = 'white'">Make background white</button>
-    <br>
-    <button type="button" onclick="document.body.style.fontFamily = 'Segoe UI' ">Make font family Segoe UI</button>
-    <button type="button" onclick="document.body.style.fontFamily = 'Verdana' ">Make font family Verdana</button>
-    <button type="button" onclick="document.body.style.fontFamily = 'Tahoma' ">Make font family Tahoma</button>
-    <br>
 
-    <button onclick="makeBlue()">click me for blue bg</button>
+    <div>
+        <h2>Font Family Test</h2>
+        <button type="button" onclick="document.body.style.fontFamily = 'Segoe UI' "> font Segoe UI</button>
+        <button type="button" onclick="document.body.style.fontFamily = 'Verdana' "> font Verdana</button>
+        <button type="button" onclick="document.body.style.fontFamily = 'Tahoma' ">font Tahoma</button>
+    </div>
+    <div>
+        <h2>Background Color Test</h2>
+        <button type="button" onclick="document.body.style.backgroundColor = 'red'
+    ">BG red</button>
+        <button type="button"
+            onclick="document.body.style.backgroundColor = 'yellow'; document.body.style.color='black'"> BG
+            yellow</button>
+        <button type="button" onclick="document.body.style.backgroundColor = 'white';document.body.style.color='black'">
+            BG white</button>
+        <button onclick="makeBlue()">BG Blue </button>
+        <button id="clickmepurple">BG Purple </button>
+    </div>
+    <div>
+        <h1>Onclick er moddhe function diye</h1>
+        <button type="button" id="bg-aqua">BG Aqua</button>
+    </div>
 
 
 
 
 
 
+<!--
+    Rule1: inline js using onclick 
+    Rule2: internal js using script
+    Rule3: external js using script.js file and link in html file
+    
+    use of onclick
+    Rule1: onclick er moddhe statement declare 
+    Rule2: js file e variable er moddhe element er id get kore tar moddhe onclick e sorasori function call ba lekhha 
+    Rule3: conclick er moddhe funtion likhe er moddhe statement declare
 
-
+ -->
 
 
 
@@ -42,9 +65,22 @@
     <script>
         function makeBlue() {
             document.body.style.backgroundColor = 'blue';
-            document.body.style.fontFamily = 'Segoe UI';
             document.body.style.color = 'white';
         }
+
+        function makePurple() {
+            document.body.style.backgroundColor = 'purple';
+            document.body.style.color = 'white';
+        }
+        const purpleButton = document.getElementById('clickmepurple');
+        purpleButton.onclick = makePurple;
+
+        const ReadMore = document.getElementById('bg-aqua');
+        ReadMore.onclick = function makeAqua() {
+            document.body.style.backgroundColor = 'aqua'
+            document.body.style.color = 'red'
+        }
+
     </script>
 
 
