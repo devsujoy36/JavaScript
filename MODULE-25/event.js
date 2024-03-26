@@ -1,1 +1,1 @@
-console.log('fuck you gais');
+console.log('love you gais');
