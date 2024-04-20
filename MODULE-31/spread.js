@@ -11,9 +11,16 @@ const arrayMax = Math.max(...numbers)
 //use speread operator to copy
 const friends = [44, 56, 15, 34, 87, 57, 66];
 const bondhu = friends;
-const dosto = [...friends]
-console.log(dosto);
+const dosto = [...bondhu]
+console.log('dosto',dosto);
 friends.push(222);
 console.log(dosto);
+console.log(friends);
+
+
+// advance coppyr sathe songkha jukto kora
+const sonkha = [...friends, 444];
+console.log(sonkha);
+
 
 
