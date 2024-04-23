@@ -1,3 +1,3 @@
 let a = 5;
 const b = 55;
-const c = 
+const c = 55;
