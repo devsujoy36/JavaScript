@@ -5,8 +5,8 @@
  * 4. if return has not the right side will return undefined
  * 5. property that doesnot exist on an object will give you undefines
  * 6. accessing array elements outside of the index range 
- * 7.
- * 8.
+ * 7. deleting an element inside an array 
+ * 8. set a value directly to undefined 
  */
 
 
@@ -45,3 +45,18 @@ console.log(fifth.age, fifth.salary);
 const sixth = [4,5,66,75,56];
 delete sixth[1];
 console.log(sixth[1], sixth[4], sixth[66]);
+console.log(sixth);
+
+
+const eigth = undefined;
+
+const nine = null;
+
+const data = {result: [], updated : null}
+console.log(typeof null);
+
+
+
+
+
+
