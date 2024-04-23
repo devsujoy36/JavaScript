@@ -7,6 +7,9 @@ function kitchen() {
 }
 
 const firstServer = kitchen()
-console.log(firstServer);
+console.log(firstServer());
+
+
+
 
 
