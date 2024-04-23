@@ -1,3 +1,12 @@
+/**
+ * chain
+ * map
+ * forEach
+ * filter
+ * find
+ */
+
+
 const data = [
     {id: 1, name: 'Sujoy', address: 'Jamlapur'} ,
     {id: 2, name: 'Price', address: 'Vola'} ,
