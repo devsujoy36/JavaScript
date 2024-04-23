@@ -31,7 +31,8 @@ const people = [
     { name: 'Akhi', age: 26,},
     { name: 'Shobuj', age: 30,},
 ]
-
-const sumOfAge = people.reduce(people => )
-
+const age = people.map(people => people.age);
+console.log(age);
+const sumOfAge = age.reduce((a, b) => a + b, 0);
+console.log(sumOfAge);
 
