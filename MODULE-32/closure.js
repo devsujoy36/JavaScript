@@ -1,5 +1,12 @@
-let a = 5;
-const b = 55;
-const c = 55;
-const d = 54;
-const e = 6
+function kitchen() {
+    let roast = 0;
+    return function(){
+        roast ++;
+        return roast;
+    }
+}
+
+const firstServer = kitchen()
+console.log(firstServer);
+
+
