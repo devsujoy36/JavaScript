@@ -1,6 +1,5 @@
 //Creating new array using map callback function
 
-
 //using for of loop to create new array
 const numbers = [4,5,6,7];
 const doubled = [];
@@ -28,6 +27,8 @@ console.log('Output by arrow function', output);
 //one line arrow function
 const output2 = numbers.map(num => num * 2);
 console.log('Output2 by one line arrow function', output2)
+
+
 
 
 
