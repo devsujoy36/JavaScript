@@ -21,15 +21,21 @@ console.log(lenovo);
 lenovo.speak('Oba kita kow')
 
 
+
+
 class Teacher{
     constructor(name, subject){
         this.name = name;
-        this.subject = subject
+        this.subject = subject;
     }
     lecture(){
         console.log('Sir is teaching Math');
     }
 }
 
+const tapan = new Teacher('Tapan sir', 'Physics');
+console.log(tapan);
 
+const rashid = new Teacher('Rashid sir', 'English');
+console.log(rashid);
 
