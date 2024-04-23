@@ -1,1 +1,1 @@
-amar 
+console.log\
