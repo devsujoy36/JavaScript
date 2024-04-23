@@ -4,6 +4,7 @@
  * forEach
  * filter
  * find
+ * reduce
  */
 
 
