@@ -1,4 +1,4 @@
-== and === are not same 
+// == and === are not same 
 
-=== datatype soho cheak kore 
-== datatype soho cheak koroe na 
+// === datatype soho cheak kore 
+// == datatype soho cheak koroe na 
