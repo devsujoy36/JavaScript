@@ -8,6 +8,8 @@ const loadPhone = async (searchText) => {
 
 
 const displayPhones = phones => {
+    console.log(phones);
+
     //step1: get phone container using dom
     const phoneContainer = document.getElementById('phone-container');
     phoneContainer.textContent = '';
@@ -15,20 +17,13 @@ const displayPhones = phones => {
     const showAllContainer = document.getElementById('show-all-container');
     //show all button if there are more than 12phones
     if (phones.length > 12) {
-        phones = phones.slice(0, 12);
         showAllContainer.classList.remove = 'hidden';
-        showAllContainer.classList = 'flex justify-end mt-3'
     }
     else {
         showAllContainer.classList = 'hidden';
-        
     }
-
-
-
-
-
-
+    
+    phones = phones.slice(0, 12);
 
 
     phones.forEach(phone => {
@@ -50,12 +45,18 @@ const displayPhones = phones => {
         `
         //step5: append the div with phone container
         phoneContainer.appendChild(phoneCard);
-    });
+    })
+
+    //hide loading spinner
+    toggleLoadingSpinner(false);
+
+
 }
 
 
 //handle search button
 const handleSearch = () => {
+    toggleLoadingSpinner(true);
     const searchField = document.getElementById('input-field');
     const searchText = searchField.value;
     console.log(searchText);
@@ -65,15 +66,21 @@ const handleSearch = () => {
 
 //handle search recap
 const handleSearch2 = () => {
-    toggleLoadingSpinner();
+    toggleLoadingSpinner(true);
     const searchField2 = document.getElementById('input-field2');
     const searchText2 = searchField2.value;
     loadPhone(searchText2);
 }
 
-const toggleLoadingSpinner = () => {
+const toggleLoadingSpinner = (isLoading) => {
     const loadingSpinner = document.getElementById('loading-spinner');
-    loadingSpinner.classList.remove('hidden')
+    if (isLoading) {
+        loadingSpinner.classList.remove('hidden')
+    }
+    else{
+        loadingSpinner.classList.add('hidden')
+    }
+
 
 
 }
