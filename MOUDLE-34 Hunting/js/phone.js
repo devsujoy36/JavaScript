@@ -47,8 +47,10 @@ const displayPhones = (phones, isShowAll) => {
 //handle show details
 const handleShowDetails = async (id) => {
     console.log('click show details', id);
-    const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${id}`)
+    //load data
+    const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
     const data = await res.json();
+    console.log(data);
     const phone = data.data;
 
     showPhoneDetails(phone);
@@ -57,8 +59,25 @@ const handleShowDetails = async (id) => {
 
 const showPhoneDetails = (phone) => {
     console.log(phone);
-    const phoneName = document.getElementById('phone-name');
 
+    const phoneName = document.getElementById('show-details-phone-name');
+    phoneName.innerText = phone.name;
+
+    const showDetailContainer = document.getElementById('show-details-container');
+    showDetailContainer.innerHTML = `
+        <div class="flex justify-center align-center">
+            <img class="text-center" src="${phone.image}" alt="">
+        </div>
+        <p><span class="font-bold ">Storage: </span>${phone?.mainFeatures.storage}</p>
+        <p><span class="font-bold ">Display Size: </span>${phone?.mainFeatures.displaySize}</p>
+        <p><span class="font-bold ">Chipset: </span>${phone?.mainFeatures.chipSet}</p>
+        <p><span class="font-bold ">Memory: </span>${phone?.mainFeatures.memory}</p>
+        <p><span class="font-bold ">Slug: </span>${phone?.slug}</p>
+        <p><span class="font-bold ">Release Date: </span>${phone?.releaseDate}</p>
+        <p><span class="font-bold ">Brand: </span>${phone?.brand}</p>
+        <p><span class="font-bold ">GPS: </span>${phone?.others.GPS}</p>
+
+    `
 
     show_details_modal.showModal();
 }
