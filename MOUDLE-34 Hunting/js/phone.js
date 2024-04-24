@@ -17,10 +17,10 @@ const displayPhones = phones => {
     const showAllContainer = document.getElementById('show-all-container');
     //show all button if there are more than 12phones
     if (phones.length > 12) {
-        showAllContainer.classList.remove = 'hidden';
+        showAllContainer.classList.remove('hidden');
     }
     else {
-        showAllContainer.classList = 'hidden';
+        showAllContainer.classList.add('hidden');
     }
     
     phones = phones.slice(0, 12);
@@ -64,13 +64,6 @@ const handleSearch = () => {
 
 }
 
-//handle search recap
-const handleSearch2 = () => {
-    toggleLoadingSpinner(true);
-    const searchField2 = document.getElementById('input-field2');
-    const searchText2 = searchField2.value;
-    loadPhone(searchText2);
-}
 
 const toggleLoadingSpinner = (isLoading) => {
     const loadingSpinner = document.getElementById('loading-spinner');

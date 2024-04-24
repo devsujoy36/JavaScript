@@ -11,22 +11,20 @@
 
 <body>
     <header>
-        <h2 class="text-6xl text-center">Hunting Phone</h2>
+        <h2 class="text-6xl text-center font-bold text-fuchsia-500">Hunting Phone API</h2>
     </header>
 
     <main class="container mx-auto mt-8">
-        <section class="bg-gray-100 p-4 m-4 text-center">
+        <section class="bg-gray-100 p-4 m-4 text-center rounded-lg">
             <input id="input-field" type="text" placeholder="Search Here....." class="input w-full max-w-xs" />
             <button onclick="handleSearch()" class="btn btn-secondary">Search</button>
             
-            <input id="input-field2" type="text" placeholder="Search2 Here....." class="input w-full max-w-xs" />
-            <button onclick="handleSearch2()" class="btn btn-primary">Search2</button>
         </section>
         
 
 
         <!--Search result-->
-        <section class="bg-yellow-500 p-4 m-4">
+        <section class="bg-gray-500 p-4 m-4 rounded-lg">
             <!--search spinner-->
             <div class="text-center my-20 hidden" id="loading-spinner" >
                 <span class="loading loading-spinner loading-lg"></span>
@@ -37,10 +35,9 @@
                 
             </div>
             
-            <!--show all button-->
+            <!--show all container-->
             <div class="hidden flex justify-end mt-3" id="show-all-container">
-                <button onclick="showmore()" class="btn btn-primary">Show more</button>
-
+                <button onclick="" class="btn btn-primary">Show more</button>
             </div>
         </section>
     </main>
