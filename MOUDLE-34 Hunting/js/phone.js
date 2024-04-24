@@ -5,15 +5,11 @@ const loadPhone = async (searchText) => {
     displayPhones(phones)
 }
 
-
-
 const displayPhones = phones => {
     console.log(phones);
-
     //step1: get phone container using dom
     const phoneContainer = document.getElementById('phone-container');
     phoneContainer.textContent = '';
-
     const showAllContainer = document.getElementById('show-all-container');
     //show all button if there are more than 12phones
     if (phones.length > 12) {
@@ -24,7 +20,6 @@ const displayPhones = phones => {
     }
     
     phones = phones.slice(0, 12);
-
 
     phones.forEach(phone => {
         console.log(phone);
@@ -46,11 +41,8 @@ const displayPhones = phones => {
         //step5: append the div with phone container
         phoneContainer.appendChild(phoneCard);
     })
-
     //hide loading spinner
     toggleLoadingSpinner(false);
-
-
 }
 
 
@@ -61,15 +53,12 @@ const handleSearch = () => {
     const searchText = searchField.value;
     console.log(searchText);
     loadPhone(searchText);
-
 }
-
 
 const toggleLoadingSpinner = (isLoading) => {
     const loadingSpinner = document.getElementById('loading-spinner');
     if (isLoading) {
         loadingSpinner.classList.remove('hidden')
-
     }
     else{
         loadingSpinner.classList.add('hidden')
