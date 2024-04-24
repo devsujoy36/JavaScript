@@ -1,17 +1,15 @@
-const loadPhone = async (searchText) => {
+const loadPhone = async (searchText,isShowAll) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`)
     const data = await res.json();
     const phones = data.data;
-    displayPhones(phones)
+    displayPhones(phones,isShowAll)
 }
 
-const displayPhones = phones => {
+const displayPhones = (phones,isShowAll) => {
     console.log(phones);
-    //step1: get phone container using dom
     const phoneContainer = document.getElementById('phone-container');
     phoneContainer.textContent = '';
     const showAllContainer = document.getElementById('show-all-container');
-    //show all button if there are more than 12phones
     if (phones.length > 12) {
         showAllContainer.classList.remove('hidden');
     }
@@ -19,15 +17,16 @@ const displayPhones = phones => {
         showAllContainer.classList.add('hidden');
     }
     
-    phones = phones.slice(0, 12);
+    console.log('is Show All ', isShowAll);
+
+    if (!isShowAll) {
+        phones = phones.slice(0, 12);
+    }
 
     phones.forEach(phone => {
         console.log(phone);
-        //step2: create a div
         const phoneCard = document.createElement('div');
-        //step3: add class in the div
         phoneCard.classList = `card bg-gray-100 shadow-xl`;
-        //step4: add innerhtml innner the div
         phoneCard.innerHTML = `
             <figure ><img class="m-4" src=${phone.image} alt="Shoes" /></figure>
             <div class="card-body">
@@ -38,7 +37,6 @@ const displayPhones = phones => {
                 </div>
             </div>
         `
-        //step5: append the div with phone container
         phoneContainer.appendChild(phoneCard);
     })
     //hide loading spinner
@@ -47,12 +45,12 @@ const displayPhones = phones => {
 
 
 //handle search button
-const handleSearch = () => {
+const handleSearch = (isShowAll) => {
     toggleLoadingSpinner(true);
     const searchField = document.getElementById('input-field');
     const searchText = searchField.value;
     console.log(searchText);
-    loadPhone(searchText);
+    loadPhone(searchText,isShowAll);
 }
 
 const toggleLoadingSpinner = (isLoading) => {
@@ -66,7 +64,7 @@ const toggleLoadingSpinner = (isLoading) => {
 }
 
 const handleShowAll = () => {
-    handleSearch()
+    handleSearch(true);
 }
 
 
