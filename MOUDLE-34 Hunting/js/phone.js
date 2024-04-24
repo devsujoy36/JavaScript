@@ -9,6 +9,7 @@ const displayPhones = (phones, isShowAll) => {
     console.log(phones);
     const phoneContainer = document.getElementById('phone-container');
     phoneContainer.textContent = '';
+
     const showAllContainer = document.getElementById('show-all-container');
     if (phones.length > 12 && !isShowAll) {
         showAllContainer.classList.remove('hidden');
@@ -65,17 +66,17 @@ const showPhoneDetails = (phone) => {
 
     const showDetailContainer = document.getElementById('show-details-container');
     showDetailContainer.innerHTML = `
-        <div class="flex justify-center align-center">
+        <div class="flex justify-center align-center m-2">
             <img class="text-center" src="${phone.image}" alt="">
         </div>
-        <p><span class="font-bold ">Storage: </span>${phone?.mainFeatures.storage}</p>
-        <p><span class="font-bold ">Display Size: </span>${phone?.mainFeatures.displaySize}</p>
-        <p><span class="font-bold ">Chipset: </span>${phone?.mainFeatures.chipSet}</p>
-        <p><span class="font-bold ">Memory: </span>${phone?.mainFeatures.memory}</p>
-        <p><span class="font-bold ">Slug: </span>${phone?.slug}</p>
-        <p><span class="font-bold ">Release Date: </span>${phone?.releaseDate}</p>
-        <p><span class="font-bold ">Brand: </span>${phone?.brand}</p>
-        <p><span class="font-bold ">GPS: </span>${phone?.others.GPS}</p>
+        <p><span class="font-bold m-2">Storage: </span>${phone?.mainFeatures?.storage}</p>
+        <p><span class="font-bold m-2">Display Size: </span>${phone?.mainFeatures?.displaySize}</p>
+        <p><span class="font-bold m-2">Chipset: </span>${phone?.mainFeatures?.chipSet}</p>
+        <p><span class="font-bold m-2">Memory: </span>${phone?.mainFeatures?.memory}</p>
+        <p><span class="font-bold m-2">Slug: </span>${phone?.slug}</p>
+        <p><span class="font-bold m-2">Release Date: </span>${phone?.releaseDate}</p>
+        <p><span class="font-bold m-2">Brand: </span>${phone?.brand}</p>
+        <p><span class="font-bold m-2">GPS: </span>${phone?.others?.GPS ? phone.others.GPS : 'No GPS Available in this device'}</p>
 
     `
 
